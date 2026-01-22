@@ -1,0 +1,12 @@
+<Solution>
+  <Folder Name="/docs/" />
+  <Folder Name="/Solution Items/">
+    <File Path="Directory.Build.props" />
+    <File Path="Directory.Build.targets" />
+    <File Path="Directory.Packages.props" />
+    <File Path="README.md" />
+  </Folder>
+  <Project Path="src/TirsvadCLI.SitemapGenerator.Core/TirsvadCLI.SitemapGenerator.Core.csproj" Id="c4076765-ef9c-43f4-9527-3b3c9a651f2f" />
+  <Project Path="src/TirsvadCLI.SitemapGenerator.Domain/TirsvadCLI.SitemapGenerator.Domain.csproj" Id="ceacb5ac-0c80-4f2d-a738-90c66dd6b5c6" />
+  <Project Path="src/TirsvadCLI.SitemapGenerator.Infrastructure/TirsvadCLI.SitemapGenerator.Infrastructure.csproj" Id="341fa6d8-1fec-4773-adf4-6a503a0b1805" />
+</Solution>
