@@ -3,13 +3,14 @@
   <PropertyGroup>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
   
   <ItemGroup Condition="'$(Configuration)' == 'Debug'">
-    <ProjectReference Include="..\TirsvadCLI.SitemapGenerator.Core\TirsvadCLI.SitemapGenerator.Domain.csproj" />
+    <ProjectReference Include="..\TirsvadCLI.SitemapGenerator.Domain\TirsvadCLI.SitemapGenerator.Domain.csproj" />
   </ItemGroup>
   <ItemGroup Condition="'$(Configuration)' != 'Debug'">
-    <ProjectReference Include="TirsvadCLI.SitemapGenerator.Domain" />
+    <PackageReference Include="TirsvadCLI.SitemapGenerator.Domain" />
   </ItemGroup>
   
 </Project>

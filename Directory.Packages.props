@@ -9,6 +9,9 @@
   </ItemGroup>
 
   <ItemGroup Condition="'$(Configuration)' != 'Debug'">
+    <PackageVersion Include="TirsvadCLI.SitemapGenerator.Domain" Version="0.0.0" />
+    <PackageVersion Include="TirsvadCLI.SitemapGenerator.Core" Version="0.0.0" />
+    <PackageVersion Include="TirsvadCLI.SitemapGenerator.Infrastructure" Version="0.0.0" />
   </ItemGroup>
 
 </Project>

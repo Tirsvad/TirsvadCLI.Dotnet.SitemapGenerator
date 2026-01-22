@@ -4,7 +4,19 @@
     <File Path="Directory.Build.props" />
     <File Path="Directory.Build.targets" />
     <File Path="Directory.Packages.props" />
+    <File Path="docker-compose.yml" />
+    <File Path="Dockerfile" />
     <File Path="README.md" />
+  </Folder>
+  <Folder Name="/Solution Items/tools/" />
+  <Folder Name="/Solution Items/tools/docker/">
+    <File Path="tools/docker/publish.sh" />
+    <File Path="tools/docker/run_tests.sh" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/TirsvadCLI.SitemapGenerator.Core.Test/TirsvadCLI.SitemapGenerator.Core.Test.csproj" Id="9fa89939-aa89-41d0-928c-bc68660a5d45" />
+    <Project Path="tests/TirsvadCLI.SitemapGenerator.Domain.Test/TirsvadCLI.SitemapGenerator.Domain.Test.csproj" Id="a0f2075b-3b26-4d2b-82d6-49eedeca84d1" />
+    <Project Path="tests/TirsvadCLI.SitemapGenerator.Infrastructure.Test/TirsvadCLI.SitemapGenerator.Infrastructure.Test.csproj" Id="520dc0ca-aab0-4f12-929d-136107d144f4" />
   </Folder>
   <Project Path="src/TirsvadCLI.SitemapGenerator.Core/TirsvadCLI.SitemapGenerator.Core.csproj" Id="c4076765-ef9c-43f4-9527-3b3c9a651f2f" />
   <Project Path="src/TirsvadCLI.SitemapGenerator.Domain/TirsvadCLI.SitemapGenerator.Domain.csproj" Id="ceacb5ac-0c80-4f2d-a738-90c66dd6b5c6" />
