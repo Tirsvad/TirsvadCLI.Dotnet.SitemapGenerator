@@ -1,0 +1,48 @@
+# Description:  This docker-compose file sets up a PostgreSQL database service with persistent storage
+#               and a custom network configuration.
+#
+# Usage:
+#   1. Ensure Docker and Docker Compose are installed on your machine.
+#   2. Run the following command to build and start the containers:
+#      docker-compose up --build
+#   3. To stop and remove the containers, networks, and volumes created by `up`, run:
+#      docker-compose down -v
+#   Note: Adjust volume paths as necessary for your host environment.
+
+services:
+  builder-stage:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: builder
+    restart: "no"
+
+  test-stage:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: tests
+    depends_on:
+      builder-stage:
+        condition: service_completed_successfully
+    working_dir: /workspace
+    volumes:
+      - ./TestResults:/artifacts/TestResults
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - CONNECTIONSTRINGS_TEST__DEFAULTCONNECTION="Data Source=/workspace/test.db"
+    restart: "no"
+
+  publish-stage:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: publish
+    depends_on:
+      test-stage:
+        condition: service_completed_successfully
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+    volumes:
+      - E:/LocalNuget:/nuget 
+    restart: no
